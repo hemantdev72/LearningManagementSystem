@@ -1,4 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
+import rootRedcuer from "./rootReducer.js";
+import { authApi } from "@/feature/api/authApi";
 
 
 const appStore=configureStore({

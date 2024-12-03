@@ -17,7 +17,7 @@ import {
 } from "@/components/ui/tabs"
 import { useLoginUserMutation, useRegisterUserMutation } from "@/feature/api/authApi"
 import { Loader2 } from "lucide-react"
-import { useState } from "react"
+import { useState,useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import { toast } from "sonner";
 
@@ -83,7 +83,7 @@ export default function Login() {
     ]); 
     
     return (
-  <div className="flex justify-center w-full">
+  <div className="flex justify-center w-full mt-24">
       <Tabs defaultValue="signup" className="w-[400px]">
       <TabsList className="grid w-full grid-cols-2">
         <TabsTrigger value="signup">Signup</TabsTrigger>

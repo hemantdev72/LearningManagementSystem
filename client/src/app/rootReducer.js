@@ -1,6 +1,6 @@
 import { combineReducers } from "@reduxjs/toolkit";
-import authReducer from "../features/authSlice"; 
-import { authApi } from "@/features/api/authApi";
+import authReducer from '../feature/authSlice.js'; 
+import { authApi } from "../feature/api/authApi.js";
 
 const rootRedcuer = combineReducers({
     [authApi.reducerPath]:authApi.reducer,

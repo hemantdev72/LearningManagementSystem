@@ -7,9 +7,11 @@ import appStore from './app/store'
 import { Toaster } from "./components/ui/sonner";
 
 createRoot(document.getElementById('root')).render(
-  <Provider store={appStore}> 
+  <Provider store={appStore}>
+   
   <App />
   <Toaster />
+  
   </Provider>
 
 )
