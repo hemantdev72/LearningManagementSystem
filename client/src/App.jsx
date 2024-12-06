@@ -7,6 +7,7 @@ import MainLayout from './layout/MainLayout'
 import { RouterProvider } from 'react-router'
 import Courses from './components/Courses'
 import MyLearning from './pages/student/MyLearning'
+import Profile from './pages/student/Profile'
 
 function App() {
   
@@ -31,6 +32,11 @@ function App() {
         path
         :"/my-learning",
         element:<MyLearning />
+      },
+      {
+        path
+        :"/profile",
+        element:<Profile />
       }]
 
     }
