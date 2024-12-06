@@ -14,13 +14,18 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Loader2 } from "lucide-react";
 import React, { useEffect, useState } from "react";
+import {
+  useLoadUserQuery,
+} from "@/feature/api/authApi";
 
 const Profile = () => {
   const [name, setName] = useState("");
   const [profilePhoto, setProfilePhoto] = useState("");
 
-    const isLoading=false;
-    const enrolledCourses=[1,2,3]
+  const {data,isLoading}=useLoadUserQuery()
+  const {user}=data;
+
+    
 
   if (isLoading) return <h1 className="text-center">Profile Loading...</h1>;
 
@@ -118,10 +123,10 @@ const Profile = () => {
       <div>
         <h1 className="font-medium text-lg">Courses you're enrolled in</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 my-5">
-        {enrolledCourses.length === 0 ? (
+        {user.enrolledCourses.length === 0 ? (
             <h1>You haven't enrolled yet</h1>
           ) : (
-            enrolledCourses.map((course) => (
+            user.enrolledCourses.map((course) => (
               <Course course={course} key={course._id} />
             ))
           )}
