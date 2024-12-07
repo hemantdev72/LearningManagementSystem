@@ -4,6 +4,7 @@ import cors from 'cors'
 import dotenv from 'dotenv'
 import connectDB from './config/db.js';
 import userRoute from './routes/user.route.js';
+import courseRoute from './routes/course.route.js'
 
 const app=express()
 
