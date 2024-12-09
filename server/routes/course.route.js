@@ -5,6 +5,6 @@ import { createCouse } from '../controllers/course.controller.js';
 
 const router=express.Router();
 
-router.get('/create',isAuthenticated,createCouse)
+router.get('/',isAuthenticated,createCouse)
 
 export default router;
