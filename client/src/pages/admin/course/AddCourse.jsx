@@ -47,6 +47,10 @@ const AddCourse = () => {
         <h1 className="font-bold text-xl">
           Lets add course, add some basic course details for your new course
         </h1>
+        <p className="text-sm">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus,
+          laborum!
+        </p>
       </div>
       <div className="space-y-4">
         <div>
