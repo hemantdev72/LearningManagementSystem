@@ -5,6 +5,7 @@ import dotenv from 'dotenv'
 import connectDB from './config/db.js';
 import userRoute from './routes/user.route.js';
 import courseRoute from './routes/course.route.js'
+import purchaseRoute from './routes/coursePurchase.route.js'
 
 const app=express()
 
@@ -18,6 +19,7 @@ app.use(express.json());
 
 app.use("/api/user",userRoute)
 app.use("/api/course", courseRoute);
+app.use("/api/purchase",purchaseRoute );
 
 connectDB()
 
